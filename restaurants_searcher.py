@@ -11,10 +11,10 @@ parser = argparse.ArgumentParser(description= '宿題')
 # 初期設定
 
 KEYID = os.environ['keyid']
-parser.add_argument('--count', type=int)
-parser.add_argument('--pref')
-parser.add_argument('--freeword')
-parser.add_argument('--format')
+parser.add_argument('--count', type=int, default=100)
+parser.add_argument('--pref', default='Z011')
+parser.add_argument('--freeword', required=True)
+parser.add_argument('--format', default='json')
 
 args = parser.parse_args()
 
